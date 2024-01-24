@@ -1,0 +1,14 @@
+name: run-node
+on: [push]
+jobs:
+    setup:
+        runs-on: ubuntu-latest
+        steps:
+            - name: check code
+              uses: actions/checkout@v2
+            - name: run test
+              run: |
+                npm run test
+                npm run test
+                npm run build
+          
